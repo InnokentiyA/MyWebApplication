@@ -1,6 +1,7 @@
 com\mycompany\testapplication\entity\controller\LoginServlet.class
 com\mycompany\testapplication\entity\service\LoginService.class
 com\mycompany\testapplication\dao\UserDao.class
+com\mycompany\testapplication\entity\controller\CabinetServlet.class
 com\mycompany\testapplication\entity\RegisterModel.class
 com\mycompany\testapplication\entity\controller\RegistrationServlet.class
 com\mycompany\testapplication\entity\Gold.class

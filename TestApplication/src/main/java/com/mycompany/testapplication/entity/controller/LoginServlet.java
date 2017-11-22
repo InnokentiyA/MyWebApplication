@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!servlet2222222222!");
         response.setContentType("text;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String username = request.getParameter("username");
