@@ -1,0 +1,13 @@
+com\mycompany\testapplication\entity\controller\LoginServlet.class
+com\mycompany\testapplication\entity\service\LoginService.class
+com\mycompany\testapplication\dao\UserDao.class
+com\mycompany\testapplication\entity\RegisterModel.class
+com\mycompany\testapplication\entity\controller\RegistrationServlet.class
+com\mycompany\testapplication\entity\Gold.class
+com\mycompany\testapplication\entity\Service.class
+com\mycompany\testapplication\entity\Sex.class
+com\mycompany\testapplication\entity\MonthlyCard.class
+com\mycompany\testapplication\entity\controller\UnLoginServlet.class
+com\mycompany\testapplication\entity\business\BusinessFacade.class
+com\mycompany\testapplication\entity\ClubCard.class
+com\mycompany\testapplication\entity\User.class

@@ -1,0 +1,277 @@
+body{
+    background-color: #f4f4f8;
+    width: 100%;
+    max-width:1327px;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 694px;
+
+}
+.content-wrapper{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.logo{
+    position: relative;
+    float: left;
+    margin: 0 90px;
+    margin-top:-30px;
+    width: 16%
+}
+.logo img{
+    width: 100%;
+}
+
+#navbar ul {
+    display: none; /*скрыть список с подпунктами*/
+    background-color: #3edd8c;
+    opacity: 0.8; 
+    position: absolute;
+    top: 100%;
+
+
+}
+
+#navbar li:hover ul { display: block;
+} /*на элемент <li> список снова был преобразован в блочный элемент*/
+#navbar, #navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#navbar {
+    /*width: 1327px;*/
+    height: 85px;
+    background-color: #424141;
+    width: 100%;
+
+}
+#navbar li {
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0 10px; 
+    height: 100%;
+}
+#navbar li a {
+    display: block;
+    line-height: 85px;
+    width: 100%;
+    color: #3edd8c;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2.5em;
+    /*2.5em*/
+    font-family: 'Arial' ;
+
+}
+#navbar ul li { 
+    float: none;
+    height: auto;
+    margin: 0 auto;
+    width: 170%;
+    background-color: #3edd8c;
+} /*чтобы они отображались друг под другом*/
+#navbar ul li a{
+    font-size: 1.67em;
+    /*1.67em*/
+    font-family: 'Arial';
+    color: #000000; /*black*/
+    /*text-decoration: underline;*/ 
+    padding-left: 15px;
+    text-align: left;
+    display: block;
+
+
+
+}
+
+#navbar li:hover { 
+    background-color: #415a4d; /*color under choice text*/
+    display: block;
+}
+#navbar ul li a:hover { color: #ffffff;
+                        display: block;
+}
+
+.main-information{
+    margin-top: 30px;
+    width: 100%;
+    overflow: auto;
+    margin: 30px auto;
+}
+.info{
+    float: left;
+    width: 45%;
+    text-align: center;
+    font-size: 1.25em;
+    /*1.25em*/
+    font-family: 'Arial';
+    padding: 4px;
+    margin-right: 15px;
+}
+.info p{
+    padding: 0 30px;
+}
+.our-gym {
+    float: left;
+    width: 45%;
+    padding: 4px;
+    text-align: center;
+    margin-left: 15px;
+}
+.our-gym img{
+    width:100%;
+
+}
+.sports-Services{
+    width: 100%;
+
+}
+.content-wrapper  h2{
+    text-align: center;
+    margin-top: 55px;
+    font: bold  2.5em Arial; 
+}
+.main-Features h4{
+    color: #f18e00;
+}
+.firstRow, .secondRow{
+    column-count: 3;
+}
+.firstRow img , .secondRow img{
+    width: 100%;
+}
+.fr1,.fr2,.fr3{
+    width: 100%;
+    padding: 5px;
+}
+.sr1,.sr2,.sr3{
+    width: 100%;
+    padding: 5px;
+}
+
+.fr1 figcaption{
+    background-color: #000000;
+    color: #ffffff;
+}
+.fr2 figcaption{
+    background-color: #75d9ef;
+}
+.fr3 figcaption{
+    background-color: #002ca2;
+}
+.sr1 figcaption{
+    background-color: #35abb9;
+    color: #ffffff;
+}
+.sr2 figcaption{
+    background-color: #d6be8f;
+}
+.sr3 figcaption{
+    background-color: #a18480;
+}
+
+
+
+figcaption{
+    text-align: center;
+    font-size: 1.67em;
+    /*1.67em*/
+    font-family: 'Arial';
+    margin: -4px 0;
+    padding: 5px;
+}
+
+.main-Features img{
+    border-radius: 50%; /* Радиус скругления */
+    box-shadow: 0 0 0 2px #f18e00, 0 0 13px #333; /* Параметры теней */
+}
+.main-Features{
+    column-count: 3;
+    margin-top:0;
+    padding-top:0;
+    width: 100%;
+    text-align: center;
+}
+.feature1, .feature2,.feature3{
+    padding: 5px;
+}
+
+.main-Features p{
+    padding: 5px;
+}
+.contacts-map{
+    background-color: #b9d098;
+    width: 100%;
+    height: 320px;
+    margin-top: 40px;
+
+}
+.contact{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.contact p{
+    margin: 0 25%;
+    margin-top: 25px; 
+
+}
+
+.map{
+    float: left;
+    width: 50%;
+}
+iframe{
+    margin: 0 25%;
+}
+footer h3{
+    text-align: center;
+}
+.copyright{
+    background-color: #4d4e4e;
+    width: 100%;
+    height: 80px;
+
+}
+.copyright p{
+    width: 75%;
+    float: left;
+    color: #ffffff;
+    font-size: 1.25em;
+    font-family: 'Arial';
+    padding-left: 25px;
+    padding-top: 10px;
+
+}
+.sotialNetwork{
+    float: left;
+    text-align: center;
+    width: 20%;
+    margin-top: 0.938em;
+
+}
+.sotialNetwork img{
+    height: 50px;
+}
+center {
+    display: block;
+    text-align: -webkit-center;
+    height: 50px;
+}
+#divId{
+    position: absolute;
+    display: none;
+    width: 500px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -250px;
+    z-index: 15;
+
+}
