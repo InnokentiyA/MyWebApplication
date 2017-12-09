@@ -5,12 +5,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Спортивный клуб SportGO</title>
         <link href="style.css" rel="stylesheet">
-        <link rel="stylesheet" href="style1.css">
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/loginStyle.css" />
         <link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
         <meta name="viewport" content="width=device-width">
-        <link href="responsive.css" rel="stylesheet">
+        
         <script type="text/javascript" src="js/jquery.js" ></script>
     </head>
 
@@ -21,13 +20,15 @@
                  style="position: absolute;
                  width: 500px; height: 400px; top: 300px;" >
                 <%@include file="loginForm.jsp" %>
-
             </div>
-            
         </center>   
 
         <nav class="menu">
-            <div class="logo">
+            <div class="logo" style="    
+                 margin:0 40px;
+                 position: relative;
+                 float: left;
+                 margin-top: -27px;">
                 <img src="Photo/logo.png" alt="logo">
             </div>
             <div class="hamb">
@@ -47,23 +48,98 @@
                 </li>
                 <li><a href="#">услуги</a></li>
                 <li><a href="#">контакты</a></li>
+
+
+                <div id="enter" style="   
+                     top:10px; 
+                     right:10px;
+                     float: left;
+                     "> <button id="loginButton" type="button" style="
+                           font-size: 2.3em;
+                           color: #3edd8c;
+                           text-decoration: none;
+                           padding: 10px 10px 10px 10px;
+                           border-radius: 3px;
+                           background:#1d3c41 ;
+                           font-family: 'Arial';
+                           margin-top: 10px;
+
+                           ">Войти</button> </div>
+                <div id="out" style=" 
+                     display: none;
+                     top:10px; 
+                     right:10px;
+                     float: left;"> <button id="unloginButton" type="button" style="
+                           font-size: 2.3em;
+                           color: #3edd8c;
+                           text-decoration: none;
+                           padding: 10px 10px 10px 10px;
+                           border-radius: 3px;
+                           background:#1d3c41 ;
+                           font-family: 'Arial';
+                           margin-top: 10px;
+                           float: left;
+
+                           ">Выйти</button>
+                    <li id="dropdown uui-profile-menu" style="
+                        padding: 0;
+                        margin-left: 17px;
+                        ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" >
+                            <div id="dropdown" style="
+                                 margin-left: 15px;
+                                 width: 140px;
+                                 height: 85px;
+                                 float: left;
+                                 align-items: center;
+                                 ">
+                                <img src="images/user.png" alt="user" style="margin-top: 17px;">
+                                <span id="userName" style="
+                                      color: white;
+                                      position: relative;
+                                      font-size: 0.7em;
+                                      padding: 0 10px;
+                                      "></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" role="menu"  style="
+                            font-size: 12px;
+                            text-align: center;
+                            width: 120px;
+                            padding: 0;
+                            margin: 0;
+                            line-height: 45px;">
+
+                            <li class="dropdown-menu-links" >
+                                <a href="/TestApplication/CabinetServlet" style="
+                                   line-height: 1.8em;
+                                   width: 150px;
+                                   padding: 0;
+                                  
+                                   ">Профиль</a>
+                            </li>
+                            <li class="dropdown-menu-links">
+                                <a href="/TestApplication/CurrentCardServlet" style="
+                                   line-height: 1.8em;
+                                   width: 150px;
+                                   padding: 0;">Актуальные абонементы</a>
+                            </li>
+                            <li class="dropdown-menu-links">
+                                <a href="/TestApplication/CurrentCardServlet" style="
+                                   line-height: 1.8em;
+                                   width: 150px;
+                                   padding: 0;">Заказать абонемент</a>
+                            </li>
+                            <li class="dropdown-menu-links">
+                                <a href="/TestApplication/CurrentCardServlet" style="
+                                   line-height: 1.8em;
+                                   width: 150px;
+                                   padding: 0;">История заказов</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
             </ul>
-            
-            <div id="enter" style="  
-                 width: 150px; 
-                 height: 50px;  
-                 position: fixed; 
-                 top:10px; 
-                 right:10px;"> <button id="loginButton" type="button">Войти</button> </div>
-            <div id="out" style=" 
-                 display: none;
-                 width: 150px; 
-                 height: 50px;  
-                 position: fixed; 
-                 top:10px; 
-                 right:10px;"> <button id="unloginButton" type="button">Выйти</button>
-                <span id="userName"></span>
-            </div>
         </nav>
     </header>
 
@@ -74,6 +150,7 @@
                 <h1>Спортивный клуб SportGO </h1>
                 <p>- территория, где совершенствуется тело, восстанавливаюся силы и создается настроение. Вы приходите в любой фитнес-клуб «SportGO», и на рецепции показываете флаер, который получите на свой электронный ящик. </p>
                 <p><a href="/TestApplication/CabinetServlet">Кабинет</a></p>
+                <p><a href="/TestApplication/CurrentCardServlet">Актуальные абонементы</a></p>
 
             </div>
             <div class="our-gym">
@@ -185,20 +262,24 @@
         $(document).on("click", "#secondLogin", function () { // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
             var username = $("#username").val();
             var password = $("#password").val();
-            if(username == ""){
-                    $('#messageDiv').text("display","none");
-                    alert("Username is required");
-                    return;
-                }
-                if(password == ""){
-                    $('#messageDiv').css("display","none");
-                    alert("Password is required");
-                    return;
-                }
+            if (username == "") {
+                $('#messageDiv').css("display", "block");
+                $('#messageDiv').text("Username is required");
+                alert("Username is required");
+                return;
+            }
+            if (password == "") {
+                $('#messageDiv').css("display", "block");
+                $('#messageDiv').text("Password is required");
+                alert("Password is required");
+                return;
+            }
             $.get("LoginServlet?username=" + username + "&password=" + password, function (responseText) {   // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response text...
                 alert(responseText);
                 if ($.trim(responseText) === "Wrong") {
+                    $('#messageDiv').css("display", "block");
                     $("#messageDiv").text("Неправильный логин или пароль!");
+
                 } else {
 
                     $("#divId").hide("fast");

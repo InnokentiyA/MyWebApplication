@@ -51,4 +51,15 @@
         <servlet-name>CabinetServlet</servlet-name>
         <url-pattern>/CabinetServlet</url-pattern>
     </servlet-mapping>
+            
+    <servlet>
+        <description></description>
+        <display-name>CurrentCardServlet</display-name>
+        <servlet-name>CurrentCardServlet</servlet-name>
+        <servlet-class>com.mycompany.testapplication.entity.controller.CurrentCardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CurrentCardServlet</servlet-name>
+        <url-pattern>/CurrentCardServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

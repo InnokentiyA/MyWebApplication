@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.testapplication.entity.controller;
 
-import com.mycompany.testapplication.entity.RegisterModel;
-import static com.mycompany.testapplication.entity.Sex.Female;
-import com.mycompany.testapplication.entity.User;
 import com.mycompany.testapplication.entity.business.BusinessFacade;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,10 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author user
- */
 @WebServlet(name = "RegistrationServlet", urlPatterns = {"/RegistrationServlet"})
 public class RegistrationServlet extends HttpServlet {
 
@@ -46,6 +34,9 @@ public class RegistrationServlet extends HttpServlet {
             String email = request.getParameter("emailsignup");
             String password = request.getParameter("passwordsignup");
             String message = null;
+            
+            System.out.println("AAAAAAAAAAAAAAAA" + username);
+            
             boolean registerOk = false;
             try {
                 registerOk = BusinessFacade.registerUser(username, email, password);

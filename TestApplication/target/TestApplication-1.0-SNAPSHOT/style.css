@@ -3,35 +3,27 @@ body{
     width: 100%;
     max-width:1327px;
     font-size: 100%;
-    margin: 0;
-    padding: 0;
     min-width: 694px;
-
 }
+
 .content-wrapper{
     width: 80%;
     margin: 0 auto;
-
 }
 
-.logo{
-    position: relative;
-    float: left;
-    margin: 0 90px;
-    margin-top:-30px;
-    width: 16%
-}
-.logo img{
-    width: 100%;
-}
 
 #navbar ul {
+    border: 1px solid #d9d9d9;
+    border-radius: 0;
+    padding: 0;
+    left: auto;
+    position: absolute;
+    box-shadow: none;
     display: none; /*скрыть список с подпунктами*/
     background-color: #3edd8c;
-    opacity: 0.8; 
-    position: absolute;
-    top: 100%;
-
+}
+.dropdown-menu{
+    height: 55px;
 
 }
 
@@ -53,14 +45,13 @@ body{
     float: left;
     position: relative;
     margin-left: 10px;
-    margin-right: 10px;
-    padding: 0 10px; 
+    margin-right: 10px; 
     height: 100%;
 }
 #navbar li a {
     display: block;
     line-height: 85px;
-    width: 100%;
+    padding: 0 10px;
     color: #3edd8c;
     text-decoration: none;
     text-align: center;
@@ -69,25 +60,22 @@ body{
     font-family: 'Arial' ;
 
 }
+
 #navbar ul li { 
     float: none;
     height: auto;
-    margin: 0 auto;
-    width: 170%;
+    margin: 0;
     background-color: #3edd8c;
-} /*чтобы они отображались друг под другом*/
+} 
+
 #navbar ul li a{
-    font-size: 1.67em;
-    /*1.67em*/
+    font-size: 1.2em;
     font-family: 'Arial';
     color: #000000; /*black*/
-    /*text-decoration: underline;*/ 
-    padding-left: 15px;
-    text-align: left;
+    text-align: right;
     display: block;
-
-
-
+     line-height: 1.8em;
+                                   width: 100%
 }
 
 #navbar li:hover { 
@@ -97,6 +85,7 @@ body{
 #navbar ul li a:hover { color: #ffffff;
                         display: block;
 }
+
 
 .main-information{
     margin-top: 30px;
@@ -231,6 +220,7 @@ iframe{
     margin: 0 25%;
 }
 footer h3{
+
     text-align: center;
 }
 .copyright{

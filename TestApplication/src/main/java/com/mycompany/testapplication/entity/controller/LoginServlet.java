@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!servlet2222222222!");
+  
         response.setContentType("text;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String username = request.getParameter("username");
@@ -45,10 +45,10 @@ public class LoginServlet extends HttpServlet {
                 out.println("Wrong");
                 
             } else {
-                System.out.println("!!!!!!!!!!!!!! "  + user.getUsername());
+                System.out.println("!!!!!!!!!!!!!! "  + user.getName());
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
-               out.println(user.getRegDate());
+                out.println(user.getName());
             }
             
            

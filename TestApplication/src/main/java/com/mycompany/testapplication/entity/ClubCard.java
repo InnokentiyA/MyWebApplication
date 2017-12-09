@@ -1,22 +1,15 @@
 package com.mycompany.testapplication.entity;
 
 public abstract class ClubCard {
-    private final int userId;
+
+    int id;
     private final double price;
 
-    public ClubCard(int userId, double price) {
-        this.userId = userId;
+    public ClubCard(int id, double price) {
+        this.id = id;
         this.price = price;
     }
+    
+    
 
-    
-    public int getUserId() {
-        return userId;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-    
-    
 }

@@ -10,30 +10,30 @@
     </head>
 
     <body>
-        <div>
+        <div class="wr">
             <h1>Кабинет пользователя ${user.username}</h1>
             <h2>Профиль</h2>
-            
-            <form class="profile" name="profile" method="post" action="#" autocomplete="off">
+
+            <form class="profile" method="post" action="/TestApplication/CabinetServlet">
                 <div>
                     <span class="title">Фамилия</span>
-                    <input type="text" name="last_name" value="${user.username}">
+                    <input type="text" name="surname" value="${user.surname}">
                 </div>
                 <div>
                     <span class="title">Имя</span>
-                    <input type="text" name="first_name" value=${user.username}>
+                    <input type="text" name="name" value=${user.name}>
                 </div>
                 <div class="obligatory">
                     <span class="title">E-mail</span>
-                    <input type="text" name="email" value="${user.username}">
+                    <input type="text" name="email" value="${user.email}">
                 </div>
                 <div>
                     <span class="title"> Контактный телефон</span>
                     <div class="phone-masterpass">Укажите телефон, если планируете использовать <a href="https://masterpass.com/#ru-ru" target="_blank">Masterpass</a> при оплате <span class="tooltip" data-tooltip="Masterpass - электронный кошелек от Mastercard">
-                            <img src="/i/img/ico/question.png">
+                            <img src="images/question.png">
                         </span>
                     </div>
-                    <input type="text" name="phone" value=${user.username}>
+                    <input type="text" name="phone" value=${user.phone}>
                     <div class="prompt">Формат: +код страны код оператора телефон<br>Пример: +380 44 591 19 88</div></div><div class="passwd">
                     <span class="title">Новый пароль</span><input type="password" name="passwd_new" value="">
                     <label class="passwd-check"><input type="checkbox">Посмотреть пароль</label>
@@ -45,14 +45,8 @@
                     <div class="prompt">Введите текущий пароль для подтверждения изменения пароля
                     </div>
 
-                </div>
-                <div>
-                </div>
-                <div class="js-stud" style=""><span class="title">Серия и номер студенческого билета</span><input type="text" name="stud_number" value="КВ 10741724">
-                </div>
-                <div class="obligatory-text">Обязательные для заполнения поля помечены жирным шрифтом</div>
-                <div class="center"><input class="button" type="submit" value="Сохранить">
-                </div>
+                </div> 
+                <div class="center"><input class="button" type="submit" value="Сохранить"></div>
             </form>
         </div>
 

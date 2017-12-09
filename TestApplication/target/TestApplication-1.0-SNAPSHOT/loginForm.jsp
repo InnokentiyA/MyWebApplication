@@ -25,6 +25,10 @@
                             <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
                             <label for="loginkeeping">Keep me logged in</label>
                         </p>
+                        <div id="messageDiv" style="display:none;
+                             color: red;
+                             font-size: small;
+                             "></div> 
                         <p class="login button"> 
                             <input type="button" id="secondLogin" value="Log in" />
 

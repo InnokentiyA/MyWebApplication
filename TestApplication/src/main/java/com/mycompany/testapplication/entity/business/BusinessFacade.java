@@ -1,14 +1,11 @@
 package com.mycompany.testapplication.entity.business;
 
+import com.mycompany.testapplication.dao.AbonementDao;
 import com.mycompany.testapplication.dao.UserDao;
+import com.mycompany.testapplication.entity.Abonement;
 import com.mycompany.testapplication.entity.Service;
-import com.mycompany.testapplication.entity.Sex;
 import com.mycompany.testapplication.entity.User;
-import static java.lang.System.out;
-import java.sql.Connection;
 import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -56,4 +53,15 @@ public class BusinessFacade {
         UserDao userDao = new UserDao();
         return userDao.insertUser(username, email, password);
     }
+
+    public static boolean updateUser(int id, String username, String email,String phone,String surname,String name, String password) throws SQLException {
+        UserDao userDao = new UserDao();
+        return userDao.updateUser(id, username, email,phone,surname, name, password);
+    }
+
+    public static Abonement getAbonement(int abonementId) throws SQLException {
+        AbonementDao abonementDao = new AbonementDao();
+        return abonementDao.getAbonement(abonementId);
+    }
+
 }
