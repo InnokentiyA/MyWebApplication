@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,12 +29,15 @@ public class RegistrationServlet extends HttpServlet {
             throws ServletException, IOException {*/
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String username = request.getParameter("usernamesignup");
-            String email = request.getParameter("emailsignup");
-            String password = request.getParameter("passwordsignup");
+            String username = request.getParameter("username");
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
             String message = null;
+            
+            System.out.println("username" + username);
+             System.out.println("password" + password);
             
             System.out.println("AAAAAAAAAAAAAAAA" + username);
             
@@ -43,6 +47,16 @@ public class RegistrationServlet extends HttpServlet {
             } catch (SQLException ex) {
                 Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
+  
+        if (!registerOk) {
+            out.println("Wrong");
+        } else {
+            out.println("GOOD");
+            
+        }
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+        dispatcher.forward(request, response);
+        System.out.println("MYYYYYY SSSERVLETTT");
 
         }
     }

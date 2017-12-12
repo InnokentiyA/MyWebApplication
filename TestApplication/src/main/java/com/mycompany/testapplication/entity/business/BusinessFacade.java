@@ -1,8 +1,10 @@
 package com.mycompany.testapplication.entity.business;
 
 import com.mycompany.testapplication.dao.AbonementDao;
+import com.mycompany.testapplication.dao.ServiceDao;
 import com.mycompany.testapplication.dao.UserDao;
 import com.mycompany.testapplication.entity.Abonement;
+import com.mycompany.testapplication.entity.AbonementType;
 import com.mycompany.testapplication.entity.Service;
 import com.mycompany.testapplication.entity.User;
 import java.sql.Date;
@@ -17,7 +19,7 @@ import java.util.logging.Logger;
 
 public class BusinessFacade {
 
-    public static Map<Service, Integer> getOrderedServices(Date start, Date end) {
+    public static Map<Service, Integer> getOrderedServices(Date start, Date end) throws SQLException {
         Map<Service, Integer> result = new HashMap<>();
         List<Service> allServices = getAllServices();
         for (Service service : allServices) {
@@ -27,15 +29,17 @@ public class BusinessFacade {
         return result;
     }
 
-    public static List<Service> getAllServices() {
-        Service service1 = new Service(1, "Pool", 45.5);
-        Service service2 = new Service(2, "Fitness", 30);
-        Service service3 = new Service(3, "Sauna", 60);
-        List<Service> allServices = new ArrayList();
-        allServices.add(service1);
-        allServices.add(service2);
-        allServices.add(service3);
-        return allServices;
+    public static List<Service> getAllServices() throws SQLException {
+//        Service service1 = new Service(1, "Pool", 45.5);
+//        Service service2 = new Service(2, "Fitness", 30);
+//        Service service3 = new Service(3, "Sauna", 60);
+//        List<Service> allServices = new ArrayList();
+//        allServices.add(service1);
+//        allServices.add(service2);
+//        allServices.add(service3);
+        ServiceDao serviceDao = new ServiceDao();
+        List<Service> services = serviceDao.getAllServices();
+        return services;
     }
 
     public static User getUser(String usernameOrEmail, String password) {
@@ -54,9 +58,9 @@ public class BusinessFacade {
         return userDao.insertUser(username, email, password);
     }
 
-    public static boolean updateUser(int id, String username, String email,String phone,String surname,String name, String password) throws SQLException {
+    public static boolean updateUser(int id, String username, String email, String phone, String surname, String name, String password) throws SQLException {
         UserDao userDao = new UserDao();
-        return userDao.updateUser(id, username, email,phone,surname, name, password);
+        return userDao.updateUser(id, username, email, phone, surname, name, password);
     }
 
     public static Abonement getAbonement(int abonementId) throws SQLException {
@@ -64,4 +68,17 @@ public class BusinessFacade {
         return abonementDao.getAbonement(abonementId);
     }
 
+    public static double getAbonementPrice(AbonementType abonementType, String[] selectedServiceIds) throws SQLException {
+        AbonementDao abonementDao = new AbonementDao();
+        return abonementDao.getAbonementPrice(abonementType, selectedServiceIds);
+    }
+
+    public static void createAbonement(AbonementType abonementType, String[] selectedServiceIds, Date dateStart, Date dateEnd, double price, int userId) throws SQLException {
+        AbonementDao abonementDao = new AbonementDao();
+        int abonId = abonementDao.createAbonement(abonementType, selectedServiceIds, dateEnd, dateStart, price, userId);
+        for (String selectedServiceId : selectedServiceIds) {
+            ServiceDao serviceDao = new ServiceDao();
+            serviceDao.addService(Integer.parseInt(selectedServiceId), abonId);
+        }
+    }
 }

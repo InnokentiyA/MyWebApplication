@@ -9,7 +9,9 @@
         <script type="text/javascript" src="js/jquery.js" ></script>
     </head>
 
-    <body>
+    <body style="
+          margin: 0 auto;
+          width: 70%;">
         <div class="wr">
             <h1>Кабинет пользователя ${user.username}</h1>
             <h2>Профиль</h2>
@@ -46,7 +48,12 @@
                     </div>
 
                 </div> 
-                <div class="center"><input class="button" type="submit" value="Сохранить"></div>
+                    <div class="center" style="
+                         margin: 20px;
+                         "><input class="button" type="submit" value="Сохранить" style="
+                                           font: 24px Arial;
+                                           padding: 10px;
+                                           "></div>
             </form>
         </div>
 

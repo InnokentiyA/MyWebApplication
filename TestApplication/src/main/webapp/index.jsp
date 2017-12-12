@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ru">
     <head>
@@ -9,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/loginStyle.css" />
         <link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
         <meta name="viewport" content="width=device-width">
-        
+
         <script type="text/javascript" src="js/jquery.js" ></script>
     </head>
 
@@ -54,17 +55,18 @@
                      top:10px; 
                      right:10px;
                      float: left;
-                     "> <button id="loginButton" type="button" style="
-                           font-size: 2.3em;
-                           color: #3edd8c;
-                           text-decoration: none;
-                           padding: 10px 10px 10px 10px;
-                           border-radius: 3px;
-                           background:#1d3c41 ;
-                           font-family: 'Arial';
-                           margin-top: 10px;
+                     "> 
+                    <button id="loginButton" type="button" style="
+                            font-size: 2.3em;
+                            color: #3edd8c;
+                            text-decoration: none;
+                            padding: 10px 10px 10px 10px;
+                            border-radius: 3px;
+                            background:#1d3c41 ;
+                            font-family: 'Arial';
+                            margin-top: 10px;
 
-                           ">Войти</button> </div>
+                            ">Войти</button> </div>
                 <div id="out" style=" 
                      display: none;
                      top:10px; 
@@ -115,7 +117,7 @@
                                    line-height: 1.8em;
                                    width: 150px;
                                    padding: 0;
-                                  
+
                                    ">Профиль</a>
                             </li>
                             <li class="dropdown-menu-links">
@@ -125,13 +127,13 @@
                                    padding: 0;">Актуальные абонементы</a>
                             </li>
                             <li class="dropdown-menu-links">
-                                <a href="/TestApplication/CurrentCardServlet" style="
+                                <a href="/TestApplication/OrderCardServlet" style="
                                    line-height: 1.8em;
                                    width: 150px;
                                    padding: 0;">Заказать абонемент</a>
                             </li>
                             <li class="dropdown-menu-links">
-                                <a href="/TestApplication/CurrentCardServlet" style="
+                                <a href="/TestApplication/HistoryServlet" style="
                                    line-height: 1.8em;
                                    width: 150px;
                                    padding: 0;">История заказов</a>
@@ -149,8 +151,7 @@
             <div class="info">
                 <h1>Спортивный клуб SportGO </h1>
                 <p>- территория, где совершенствуется тело, восстанавливаюся силы и создается настроение. Вы приходите в любой фитнес-клуб «SportGO», и на рецепции показываете флаер, который получите на свой электронный ящик. </p>
-                <p><a href="/TestApplication/CabinetServlet">Кабинет</a></p>
-                <p><a href="/TestApplication/CurrentCardServlet">Актуальные абонементы</a></p>
+
 
             </div>
             <div class="our-gym">
@@ -222,7 +223,14 @@
                 <p>Хорошее освещение, мягкое покрытие, большие зеркала, постоянное кондиционирование - вот к чему мы стремимся в обустройстве залов</p>
             </div>
         </div>
-
+        <c:choose>
+            <c:when test="${user != null}">
+                <input type="hidden" value="userOn" id="userOn" />
+            </c:when>    
+            <c:otherwise>
+                <input type="hidden" value="userOut" id="userOut" />
+            </c:otherwise>
+        </c:choose>
     </div>
 
     <footer>
@@ -315,8 +323,8 @@
 
             var username = $("#usernamesignup").val();
             var email = $("#emailsignup").val();
-            var password = $("#password").val();
-            $.get("RegistrationServlet?firstName=" + username + "&email=" + email + "&password=" + password, function (responseText) {   // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response text...
+            var password = $("#passwordsignup").val();
+            $.get("RegistrationServlet?username=" + username + "&email=" + email + "&password=" + password, function (responseText) {   // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response text...
                 alert(responseText);
 
                 if ($.trim(responseText) === "Wrong") {
@@ -324,8 +332,6 @@
                 } else {
                     alert("Successfully registered!!!!!!!!!!!!!!!!!");
                     $("#divId").hide("fast");
-
-
 
                 }// Locate HTML DOM element with ID "somediv" and set its text content with the response text.
             });

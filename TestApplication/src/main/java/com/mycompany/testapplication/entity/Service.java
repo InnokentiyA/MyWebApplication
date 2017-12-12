@@ -3,13 +3,42 @@ package com.mycompany.testapplication.entity;
 public class Service {
     private int id;
     private String name;
-    private double price;
+    private double priceSingle;
+    private double priceMonth;
+    private double priceGold;
 
-    public Service(int id, String name, double price) {
+    public Service(int id, String name, double priceSingle, double priceMonth, double priceGold) {
         this.id = id;
         this.name = name;
-        this.price = price;
+        this.priceSingle = priceSingle;
+        this.priceMonth = priceMonth;
+        this.priceGold = priceGold;
     }
+
+    public double getPriceSingle() {
+        return priceSingle;
+    }
+
+    public void setPriceSingle(double priceSingle) {
+        this.priceSingle = priceSingle;
+    }
+
+    public double getPriceMonth() {
+        return priceMonth;
+    }
+
+    public void setPriceMonth(double priceMonth) {
+        this.priceMonth = priceMonth;
+    }
+
+    public double getPriceGold() {
+        return priceGold;
+    }
+
+    public void setPriceGold(double priceGold) {
+        this.priceGold = priceGold;
+    }
+ 
 
     
     public int getId() {
@@ -20,9 +49,6 @@ public class Service {
         return name;
     }
 
-    public double getPrice() {
-        return price;
-    }
 
     @Override
     public int hashCode() {
@@ -51,8 +77,10 @@ public class Service {
 
     @Override
     public String toString() {
-        return "Service{" + "id=" + id + ", name=" + name + ", price=" + price + '}';
+        return "Service{" + "id=" + id + ", name=" + name + ", priceSingle=" + priceSingle + ", priceMonth=" + priceMonth + ", priceGold=" + priceGold + '}';
     }
+
+
     
     
     

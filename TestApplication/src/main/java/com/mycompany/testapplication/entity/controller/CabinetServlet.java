@@ -75,6 +75,7 @@ public class CabinetServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         String nextJSP;
+        System.out.println(" =================================== ");
         if (user == null) {
             nextJSP = "/index.jsp";
         } else {
@@ -92,7 +93,7 @@ public class CabinetServlet extends HttpServlet {
 //      out.println
 //          (", Employee number:" + request.getAttribute("empid") + "</B>");
         this.getServletContext().getRequestDispatcher("/cabinet.jsp").
-                include(request, response);
+                forward(request, response);
 
     }
 

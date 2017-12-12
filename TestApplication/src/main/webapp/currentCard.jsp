@@ -9,8 +9,10 @@
         <script type="text/javascript" src="js/jquery.js" ></script>
     </head>
 
-    <body>
-        <div>
+    <body style="
+          margin: 0 auto;
+          width: 70%;">
+        <div class="wr">
             <h1>Кабинет пользователя ${user.username}</h1>
             <h2>Актуальные абонементы</h2>
             <form class="profile" method="post" action="/TestApplication/CurrentCardServlet">

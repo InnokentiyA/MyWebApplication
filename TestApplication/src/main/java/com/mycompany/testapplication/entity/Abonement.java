@@ -8,10 +8,6 @@ package com.mycompany.testapplication.entity;
 import java.sql.Date;
 import java.util.List;
 
-/**
- *
- * @author user
- */
 public class Abonement {
 
     private int id;

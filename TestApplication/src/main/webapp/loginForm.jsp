@@ -60,7 +60,7 @@
                             <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
                         </p>
                         <p class="signin button"> 
-                            <input type="submit" id="secondSignin" value="Sign up"/> 
+                            <input type="button" id="secondSignin" value="Sign up"/> 
                         </p>
                         <p class="change_link">  
                             Already a member ?

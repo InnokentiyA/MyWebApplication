@@ -62,4 +62,15 @@
         <servlet-name>CurrentCardServlet</servlet-name>
         <url-pattern>/CurrentCardServlet</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <description></description>
+        <display-name>OrderCardServlet</display-name>
+        <servlet-name>OrderCardServlet</servlet-name>
+        <servlet-class>com.mycompany.testapplication.entity.controller.OrderCardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderCardServlet</servlet-name>
+        <url-pattern>/OrderCardServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
