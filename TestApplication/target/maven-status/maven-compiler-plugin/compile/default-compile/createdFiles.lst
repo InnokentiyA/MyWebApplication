@@ -15,5 +15,4 @@ com\mycompany\testapplication\entity\controller\UnLoginServlet.class
 com\mycompany\testapplication\entity\Abonement.class
 com\mycompany\testapplication\entity\business\BusinessFacade.class
 com\mycompany\testapplication\entity\ClubCard.class
-com\mycompany\testapplication\dao\AbonementDao.class
 com\mycompany\testapplication\entity\User.class

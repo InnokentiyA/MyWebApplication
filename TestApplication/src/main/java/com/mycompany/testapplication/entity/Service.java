@@ -15,6 +15,7 @@ public class Service {
         this.priceGold = priceGold;
     }
 
+
     public double getPriceSingle() {
         return priceSingle;
     }

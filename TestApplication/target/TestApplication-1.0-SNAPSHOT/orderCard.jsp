@@ -52,10 +52,99 @@
 
     <body style="
           margin: 0 auto;
-          width: 70%;">
+          width: 80%;">
         <div class="wr">
             <h1>Кабинет пользователя ${user.username}</h1>
-            <h2>Заказ абонемента</h2>
+            <div id="menu" style="
+                 height: 45px;
+                 background-color: #97a7b0;
+                 width: 100%;
+
+                 ">
+                <ul>
+                    <li style="
+                        float: left;
+                        list-style-type: none;
+                        position: relative;
+                        margin-left: 10px;
+                        margin-right: 10px; 
+                        height: 100%;
+                        "><a href="/TestApplication/CabinetServlet" style="
+                         display: block;
+                         line-height: 45px;
+                         padding: 0 10px;
+                         color: white;
+                         text-decoration: none;
+                         text-align: center;
+                         font-size: 1.5em;
+                         background: #97a7b0;
+                         font-family: 'Arial' ;
+                         font-weight: bold;
+                         ">Профиль</a></li>
+                    <li style="
+                        float: left;
+                        list-style-type: none;
+                        position: relative;
+                        margin-left: 10px;
+                        margin-right: 10px; 
+                        height: 100%;
+                        "><a href="/TestApplication/CurrentCardServlet" style="
+                         display: block;
+                         line-height: 45px;
+                         padding: 0 10px;
+                         color: white;
+
+                         text-decoration: none;
+                         text-align: center;
+                         font-size: 1.5em;
+                         background: #97a7b0;
+                         /*2.5em*/
+                         font-family: 'Arial' ;
+                         font-weight: bold;
+                         ">Актуальные абонементы</a></li>
+                    <li style="
+                        list-style-type: none;
+                        float: left;
+                        position: relative;
+                        margin-left: 10px;
+                        margin-right: 10px; 
+                        height: 100%;
+                        "><a style="
+                         display: block;
+                         line-height: 45px;
+                         padding: 0 10px;
+                         color: whitesmoke;
+                         text-decoration: none;
+                         text-align: center;
+                         font-size: 1.5em;
+                         background: #97a7b0;
+                         /*2.5em*/
+                         font-family: 'Arial' ;
+                         font-weight: bold;
+                         ">Заказать абонемент</a></li>
+                    <li style="
+                        float: left;
+                        list-style-type: none;
+                        position: relative;
+                        margin-left: 10px;
+                        margin-right: 10px; 
+                        height: 100%;
+                        "><a href="/TestApplication/CabinetServlet" style="
+                         display: block;
+                         line-height: 45px;
+                         padding: 0 10px;
+                         color: white;
+
+                         text-decoration: none;
+                         text-align: center;
+                         font-size: 1.5em;
+                         background: #97a7b0;
+                         /*2.5em*/
+                         font-family: 'Arial' ;
+                         font-weight: bold;
+                         ">История заказов</a></li>
+                </ul>
+            </div>
 
             <form class="profile" method="post" action="/TestApplication/OrderCardServlet">
                 <label>Выбирите тип абонемента: </label>

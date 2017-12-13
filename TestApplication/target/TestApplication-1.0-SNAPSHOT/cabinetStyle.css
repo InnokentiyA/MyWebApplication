@@ -41,15 +41,13 @@ h2 {
     font-weight: bold;
 }
 form, h1, h2{
-    margin: 0;
+    margin: auto 30px;
 }
 form.profile>div {
-    margin: 10px 0;
- 
+    margin: 10px;
+
 }
-div {
-    display: block;
-}
+
 .center {
     text-align: center;
 }
@@ -102,9 +100,9 @@ form.profile input[type=text], form.profile input[type=password] {
     font-weight: bold;
 }
 input{
-    
+
     text-shadow: #f0f0f0 1px 1px 0;
-    
+    background: #f0f0f0;
     border: 1px solid #b8bfc7 !important;
     box-shadow: 0 1px 0 0 #fff;    border-radius: 3px;
     padding: 3px;
@@ -119,4 +117,6 @@ input{
 }
 form.profile span.title {
     display: block;
+    font-size: 15px;
+    padding-bottom: 5px;
 }
