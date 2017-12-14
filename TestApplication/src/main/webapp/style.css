@@ -3,12 +3,15 @@ body{
     width: 100%;
     max-width:1327px;
     font-size: 100%;
+    margin: 0;
+    padding: 0;
     min-width: 694px;
-}
 
+}
 .content-wrapper{
     width: 80%;
     margin: 0 auto;
+
 }
 
 
@@ -47,17 +50,20 @@ body{
     margin-left: 10px;
     margin-right: 10px; 
     height: 100%;
+
 }
 #navbar li a {
     display: block;
     line-height: 85px;
     padding: 0 10px;
+    width: 100%;
     color: #3edd8c;
     text-decoration: none;
     text-align: center;
     font-size: 2.5em;
     /*2.5em*/
     font-family: 'Arial' ;
+    height: 100%;
 
 }
 
@@ -65,17 +71,19 @@ body{
     float: none;
     height: auto;
     margin: 0;
+    width: 100%;
     background-color: #3edd8c;
 } 
 
 #navbar ul li a{
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-family: 'Arial';
     color: #000000; /*black*/
-    text-align: right;
+    text-align: left;
     display: block;
-     line-height: 1.8em;
-                                   width: 100%
+    line-height: 1.8em;
+    width: 100%;
+    padding-bottom: 3px;
 }
 
 #navbar li:hover { 
@@ -86,12 +94,12 @@ body{
                         display: block;
 }
 
-
 .main-information{
     margin-top: 30px;
     width: 100%;
     overflow: auto;
     margin: 30px auto;
+    padding-top: 30px;
 }
 .info{
     float: left;
@@ -128,6 +136,7 @@ body{
 }
 .main-Features h4{
     color: #f18e00;
+    padding: 5px;
 }
 .firstRow, .secondRow{
     column-count: 3;
@@ -186,6 +195,7 @@ figcaption{
     padding-top:0;
     width: 100%;
     text-align: center;
+    margin-top: 30px;
 }
 .feature1, .feature2,.feature3{
     padding: 5px;

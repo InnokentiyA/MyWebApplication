@@ -13,11 +13,15 @@
           margin: 0 auto;
           width: 80%;">
         <div class="wr">
-            <h1>Кабинет пользователя ${user.username}</h1>
+            <div class="logo">
+                <img src="Photo/logo.png" alt="logo">
+            </div>
+            <h1>Кабинет пользователя ${user.email}</h1>
             <div id="menu" style="
                  height: 45px;
                  background-color: #97a7b0;
                  width: 100%;
+                 margin-top: 30px;
 
                  ">
                 <ul>

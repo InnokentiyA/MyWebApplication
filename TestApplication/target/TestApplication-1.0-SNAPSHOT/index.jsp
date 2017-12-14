@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Спортивный клуб SportGO</title>
-        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css" >
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/loginStyle.css" />
         <link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
@@ -29,7 +29,7 @@
                  margin:0 40px;
                  position: relative;
                  float: left;
-                 margin-top: -27px;">
+                 margin-top: -30px;">
                 <img src="Photo/logo.png" alt="logo">
             </div>
             <div class="hamb">
@@ -42,9 +42,33 @@
                 <li><a href="#">главная</a></li>
                 <li><a href="#">о клубе</a>
                     <ul class="club">
-                        <li><a href="#">История компании</a></li>
-                        <li><a href="#">Наш персонал</a></li>
-                        <li><a href="#">Наши партнеры</a></li>
+                        <li><a href="#" style="
+                                   font-size: 1.6em;
+                                   font-family: 'Arial';
+                                   color: #000000;
+                                   text-align: left;
+                                   display: block;
+                                   line-height: 1.8em;
+                                   
+                                   ">История компании</a></li>
+                        <li><a href="#" style="
+                                   font-size: 1.6em;
+                                   font-family: 'Arial';
+                                   color: #000000;
+                                   text-align: left;
+                                   display: block;
+                                   line-height: 1.8em;
+                                   
+                                   ">Наш персонал</a></li>
+                        <li><a href="#" style="
+                                   font-size: 1.6em;
+                                   font-family: 'Arial';
+                                   color: #000000;
+                                   text-align: left;
+                                   display: block;
+                                   line-height: 1.8em;
+                                   
+                                   ">Наши партнеры</a></li>
                     </ul>
                 </li>
                 <li><a href="#">услуги</a></li>
@@ -71,6 +95,7 @@
                      display: none;
                      top:10px; 
                      right:10px;
+                     height: 85px;
                      float: left;"> <button id="unloginButton" type="button" style="
                            font-size: 2.3em;
                            color: #3edd8c;
@@ -80,21 +105,16 @@
                            background:#1d3c41 ;
                            font-family: 'Arial';
                            margin-top: 10px;
+                           margin-left: 20px;
+                           margin-right: 20px;
                            float: left;
 
                            ">Выйти</button>
-                    <li id="dropdown uui-profile-menu" style="
-                        padding: 0;
-                        margin-left: 17px;
-                        ">
+                    <li id="dropdown uui-profile-menu" >
                         <a class="dropdown-toggle" data-toggle="dropdown" >
-                            <div id="dropdown" style="
-                                 margin-left: 15px;
-                                 width: 140px;
+                            <div id="dropdown" style=" 
                                  height: 85px;
-                                 float: left;
-                                 align-items: center;
-                                 ">
+                                 margin-left: 10px;">
                                 <img src="images/user.png" alt="user" style="margin-top: 17px;">
                                 <span id="userName" style="
                                       color: white;
@@ -107,36 +127,54 @@
                         <ul class="dropdown-menu" role="menu"  style="
                             font-size: 12px;
                             text-align: center;
-                            width: 120px;
+                            width: 160px;
                             padding: 0;
                             margin: 0;
                             line-height: 45px;">
 
                             <li class="dropdown-menu-links" >
                                 <a href="/TestApplication/CabinetServlet" style="
+                                   font-size: 1.6em;
+                                   font-family: 'Arial';
+                                   color: #000000;
+                                   text-align: left;
+                                   display: block;
                                    line-height: 1.8em;
-                                   width: 150px;
-                                   padding: 0;
-
+                                   
                                    ">Профиль</a>
                             </li>
                             <li class="dropdown-menu-links">
                                 <a href="/TestApplication/CurrentCardServlet" style="
+                                   font-size: 1.6em;
+                                   font-family: 'Arial';
+                                   color: #000000;
+                                   text-align: left;
+                                   display: block;
                                    line-height: 1.8em;
-                                   width: 150px;
-                                   padding: 0;">Актуальные абонементы</a>
+                                   
+                                   ">Актуальные абонементы</a>
                             </li>
                             <li class="dropdown-menu-links">
                                 <a href="/TestApplication/OrderCardServlet" style="
+                                   font-size: 1.6em;
+                                   font-family: 'Arial';
+                                   color: #000000;
+                                   text-align: left;
+                                   display: block;
                                    line-height: 1.8em;
-                                   width: 150px;
-                                   padding: 0;">Заказать абонемент</a>
+                                   
+                                   ">Заказать абонемент</a>
                             </li>
                             <li class="dropdown-menu-links">
                                 <a href="/TestApplication/HistoryServlet" style="
+                                   font-size: 1.6em;
+                                   font-family: 'Arial';
+                                   color: #000000;
+                                   text-align: left;
+                                   display: block;
                                    line-height: 1.8em;
-                                   width: 150px;
-                                   padding: 0;">История заказов</a>
+                                   
+                                   ">История заказов</a>
                             </li>
                         </ul>
                     </li>

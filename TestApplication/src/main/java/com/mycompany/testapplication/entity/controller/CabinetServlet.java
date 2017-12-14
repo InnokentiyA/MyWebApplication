@@ -93,7 +93,7 @@ public class CabinetServlet extends HttpServlet {
 //      out.println
 //          (", Employee number:" + request.getAttribute("empid") + "</B>");
         this.getServletContext().getRequestDispatcher("/cabinet.jsp").
-                forward(request, response);
+                include(request, response);
 
     }
 

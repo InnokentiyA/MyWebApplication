@@ -7,12 +7,10 @@ com\mycompany\testapplication\entity\controller\CabinetServlet.class
 com\mycompany\testapplication\entity\controller\CurrentCardServlet.class
 com\mycompany\testapplication\entity\controller\RegistrationServlet.class
 com\mycompany\testapplication\entity\AbonementType.class
-com\mycompany\testapplication\entity\Gold.class
 com\mycompany\testapplication\entity\Service.class
 com\mycompany\testapplication\entity\Sex.class
-com\mycompany\testapplication\entity\MonthlyCard.class
 com\mycompany\testapplication\entity\controller\UnLoginServlet.class
 com\mycompany\testapplication\entity\Abonement.class
 com\mycompany\testapplication\entity\business\BusinessFacade.class
-com\mycompany\testapplication\entity\ClubCard.class
+com\mycompany\testapplication\dao\AbonementDao.class
 com\mycompany\testapplication\entity\User.class

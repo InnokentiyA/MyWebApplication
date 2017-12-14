@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.testapplication.entity.controller;
 
 import com.mycompany.testapplication.entity.Abonement;
@@ -21,10 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author user
- */
 @WebServlet(name = "CurrentCardServlet", urlPatterns = {"/CurrentCardServlet"})
 
 public class CurrentCardServlet extends HttpServlet {
@@ -62,12 +53,6 @@ public class CurrentCardServlet extends HttpServlet {
         System.out.println("!!!!!!!!!!!!!!!!!!!!!servlet!");
         
 
-//        HttpSession session = request.getSession();
-//        
-//        User user = (User) session.getAttribute("user");
-//        request.setAttribute("user", user);
-//      out.println
-//          (", Employee number:" + request.getAttribute("empid") + "</B>");
         this.getServletContext().getRequestDispatcher("/currentCard.jsp").
                 forward(request, response);
 
